@@ -70,6 +70,38 @@ function UserList({ users }: { users: UserProps[] }) {
 }
 ```
 
+## Event
+
+By passing function, you can handle events. 
+
+> ![Important]
+> 
+> Do not call the event handler function with parentheses. Just pass the function name.
+
+```ts
+function Button() {
+  const handleClick = () => {
+    alert('Click happened');
+  };
+
+  return (
+    <button onClick={handleClick}>
+      Click me
+    </button>
+  );
+}
+```
+
+## State using Hooks
+
+Functions starting with use are called Hooks. useState is a built-in Hook provided by React.
+
+`useState` is a Hook that lets you add React state to function components. It returns a pair of values: the current state and a function that updates it.  When you want to change state, call set function with new value.
+
+```ts
+const [count, setCount] = useState(0);
+```
+
 ## Reference
 
-* [ - ]
+* [Quick Start - React](https://react.dev/learn)
