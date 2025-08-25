@@ -1,5 +1,5 @@
-import Profile from "./components/Profile";
+import ShoppingList from "./components/ShoppingList";
 
 export default function App() {
-  return <Profile />;
+  return <ShoppingList />;
 }
