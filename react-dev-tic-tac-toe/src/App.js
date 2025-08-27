@@ -10,7 +10,11 @@ export default function App() {
   const currentSquares = history[currentMoveIndex];
 
   const historyButtons = history.map((_, moveIndex) => {
-    const description = getMoveDescription(moveIndex, currentMoveIndex);
+    const description = getMoveDescription(
+      history,
+      moveIndex,
+      currentMoveIndex
+    );
 
     return (
       <li key={moveIndex}>
@@ -50,8 +54,29 @@ export default function App() {
   );
 }
 
-function getMoveDescription(moveIndex, currentMoveIndex) {
-  if (moveIndex === currentMoveIndex) return `You are here #${moveIndex}`;
-  if (moveIndex > 0) return `Go to move #${moveIndex}`;
-  return "Go to game start";
+function getMoveDescription(history, moveIndex, currentMoveIndex) {
+  if (moveIndex === 0) return "Go to game start";
+
+  const [row, col] = getMoveLocation(history, moveIndex);
+
+  if (moveIndex === currentMoveIndex)
+    return `You are here #${moveIndex} (${row}, ${col})`;
+  return `Go to move #${moveIndex} (${row}, ${col})`;
+}
+
+function getMoveLocation(history, moveIndex) {
+  const prev = history[moveIndex - 1];
+  const curr = history[moveIndex];
+
+  let changedIndex = -1;
+  for (let i = 0; i < curr.length; i++) {
+    if (prev[i] !== curr[i]) {
+      changedIndex = i;
+      break;
+    }
+  }
+
+  const row = Math.floor(changedIndex / 3) + 1;
+  const col = (changedIndex % 3) + 1;
+  return [row, col];
 }
