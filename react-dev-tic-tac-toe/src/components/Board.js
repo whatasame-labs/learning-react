@@ -17,7 +17,7 @@ export function Board({ xIsNext, squares, onPlay }) {
   }
 
   const renderSquare = (i) => (
-    <Square value={squares[i]} onSquareClick={() => handleClick(i)} />
+    <Square key={i} value={squares[i]} onSquareClick={() => handleClick(i)} />
   );
 
   return (
