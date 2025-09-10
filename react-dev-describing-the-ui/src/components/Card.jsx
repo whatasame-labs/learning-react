@@ -1,3 +1,10 @@
-export default function Card({ children }) {
-  return <div className="card">{children}</div>;
+export default function Card({ title, children }) {
+  return (
+    <div className="card">
+      <div className="card-content">
+        <h1>{title}</h1>
+        {children}
+      </div>
+    </div>
+  );
 }

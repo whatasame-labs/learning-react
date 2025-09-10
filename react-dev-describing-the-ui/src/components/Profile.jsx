@@ -1,10 +1,16 @@
-import Avatar from './Avatar.jsx';
+import Card from './Card.jsx';
 
 export default function Profile() {
   return (
-    <>
-      <Avatar size={40} person={{ name: 'Gregorio Y. Zara', imageId: '7vQD0fP' }}></Avatar>
-      <Avatar size={120} person={{ name: 'Gregorio Y. Zara', imageId: '7vQD0fP' }}></Avatar>
-    </>
+    <div>
+      <Card title="Photo">
+        <img className="avatar" src="https://i.imgur.com/OKS67lhm.jpg" alt="Aklilu Lemma" width={100} height={100} />
+      </Card>
+      <Card title="About">
+        <p>
+          Aklilu Lemma was a distinguished Ethiopian scientist who discovered a natural treatment to schistosomiasis.
+        </p>
+      </Card>
+    </div>
   );
 }
