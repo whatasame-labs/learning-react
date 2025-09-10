@@ -1,11 +1,9 @@
-import Gallery from './components/Gallery.jsx';
-import Profile from './components/Profile.jsx';
+import Bio from './components/Bio.jsx';
 
 export default function App() {
   return (
     <>
-      <Profile />
-      <Gallery />
+      <Bio />
     </>
   );
 }
