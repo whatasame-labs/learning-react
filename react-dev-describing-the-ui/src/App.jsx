@@ -1,9 +1,11 @@
-import Congratulations from './components/Congratulations.jsx';
+import Gallery from './components/Gallery.jsx';
+import Profile from './components/Profile.jsx';
 
 export default function App() {
   return (
     <>
-      <Congratulations />
+      <Profile />
+      <Gallery />
     </>
   );
 }
