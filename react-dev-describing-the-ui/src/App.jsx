@@ -1,9 +1,9 @@
-import Bio from './components/Bio.jsx';
+import TodoList from './components/TodoList.jsx';
 
 export default function App() {
   return (
     <>
-      <Bio />
+      <TodoList />
     </>
   );
 }
