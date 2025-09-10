@@ -1,23 +1,10 @@
-import { getImageUrl } from '../utils/utils.js';
+import Avatar from './Avatar.jsx';
 
-export default function Profile({ imageId, name, profession, awards, discovered, imageSize = 70 }) {
+export default function Profile() {
   return (
-    <section className="profile">
-      <h2>{name}</h2>
-      <img className="avatar" src={getImageUrl(imageId)} alt={name} width={imageSize} height={imageSize} />
-      <ul>
-        <li>
-          <b>Profession: </b>
-          {profession}
-        </li>
-        <li>
-          <b>Awards: {awards.length}</b>({awards.join(', ')})
-        </li>
-        <li>
-          <b>Discovered: </b>
-          {discovered}
-        </li>
-      </ul>
-    </section>
+    <>
+      <Avatar size={40} person={{ name: 'Gregorio Y. Zara', imageId: '7vQD0fP' }}></Avatar>
+      <Avatar size={120} person={{ name: 'Gregorio Y. Zara', imageId: '7vQD0fP' }}></Avatar>
+    </>
   );
 }
