@@ -1,9 +1,9 @@
-import Profile from './components/Profile.jsx';
+import PackingList from './components/PackingList.jsx';
 
 export default function App() {
   return (
     <>
-      <Profile />
+      <PackingList />
     </>
   );
 }
