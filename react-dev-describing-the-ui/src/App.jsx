@@ -1,9 +1,9 @@
-import PackingList from './components/PackingList.jsx';
+import DrinkList from './components/DrinkList.jsx';
 
 export default function App() {
   return (
     <>
-      <PackingList />
+      <DrinkList />
     </>
   );
 }
