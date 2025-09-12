@@ -1,9 +1,9 @@
-import List from './components/List.jsx';
+import RecipeList from './components/RecipeList.jsx';
 
 export default function App() {
   return (
     <>
-      <List />
+      <RecipeList />
     </>
   );
 }
