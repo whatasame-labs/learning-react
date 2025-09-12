@@ -1,4 +1,4 @@
-import { getImageUrl } from '../utils/utils.js';
+import { getImageUrl } from '../common/utils.js';
 
 const BIG_SIZE = 90;
 
