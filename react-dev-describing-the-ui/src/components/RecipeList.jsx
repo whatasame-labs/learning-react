@@ -6,15 +6,21 @@ export default function RecipeList() {
     <div>
       <h1>Recipes</h1>
       {recipes.map((recipe) => (
-        <Fragment key={recipe.id}>
-          <h2>{recipe.name}</h2>
-          <ul>
-            {recipe.ingredients.map((ingredient) => {
-              return <li>{ingredient}</li>;
-            })}
-          </ul>
-        </Fragment>
+        <Recipe key={recipe.id} {...recipe}></Recipe>
       ))}
     </div>
+  );
+}
+
+function Recipe({ name, ingredients }) {
+  return (
+    <>
+      <h2>{name}</h2>
+      <ul>
+        {ingredients.map((ingredient) => {
+          return <li>{ingredient}</li>;
+        })}
+      </ul>
+    </>
   );
 }
