@@ -1,9 +1,9 @@
-import RecipeList from './components/RecipeList.jsx';
+import Poem from './components/Poem.jsx';
 
 export default function App() {
   return (
     <>
-      <RecipeList />
+      <Poem />
     </>
   );
 }
