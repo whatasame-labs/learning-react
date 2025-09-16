@@ -1,16 +1,15 @@
-import Card from './Card.jsx';
+import Panel from './Panel.jsx';
+import Avatar from './Avatar.jsx';
 
-export default function Profile() {
+export default function Profile({ person }) {
   return (
-    <div>
-      <Card title="Photo">
-        <img className="avatar" src="https://i.imgur.com/OKS67lhm.jpg" alt="Aklilu Lemma" width={100} height={100} />
-      </Card>
-      <Card title="About">
-        <p>
-          Aklilu Lemma was a distinguished Ethiopian scientist who discovered a natural treatment to schistosomiasis.
-        </p>
-      </Card>
-    </div>
+    <Panel>
+      <Header person={person} />
+      <Avatar person={person} />
+    </Panel>
   );
+}
+
+function Header({ person }) {
+  return <h1>{person.name}</h1>;
 }
