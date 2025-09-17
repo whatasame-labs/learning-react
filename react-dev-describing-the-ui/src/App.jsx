@@ -1,5 +1,5 @@
-import Form from './components/Form.jsx';
+import FeedbackForm from './components/FeedbackForm.jsx';
 
 export default function App() {
-  return <Form></Form>;
+  return <FeedbackForm></FeedbackForm>;
 }
