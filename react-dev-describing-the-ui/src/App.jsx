@@ -1,5 +1,5 @@
-import Gallery from './components/Gallery.jsx';
+import Form from './components/Form.jsx';
 
 export default function App() {
-  return <Gallery></Gallery>;
+  return <Form></Form>;
 }
