@@ -1,5 +1,5 @@
-import FeedbackForm from './components/FeedbackForm.jsx';
+import TrafficLight from './components/TrafficLight.jsx';
 
 export default function App() {
-  return <FeedbackForm></FeedbackForm>;
+  return <TrafficLight></TrafficLight>;
 }
